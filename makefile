@@ -1,3 +1,3 @@
 .PHONY: test
-tests:
-	go test "./..."
+run/tests:
+	go test -v ./...
