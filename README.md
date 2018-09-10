@@ -1,4 +1,5 @@
 Hey, eventhough I write code everyday to solve practical problems, algorithms appear to be a different game.
+
 It's time I sharpen up my algorithm skills by taking different tests. I'm documenting them here.
 
 ToDo:
