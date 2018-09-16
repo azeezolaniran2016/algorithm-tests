@@ -7,7 +7,8 @@ Hey, eventhough I write code everyday to solve practical problems, algorithms ap
 It's time I sharpen up my algorithm skills by taking different tests. I'm documenting them here.
 
 ## Completed Tests
- - [x] [BinaryGap](https://app.codility.com/programmers/lessons/1-iterations/binary_gap/) 
+ - [x] [BinaryGap](https://app.codility.com/programmers/lessons/1-iterations/binary_gap/)
+ - [x] [InsertionSort](https://www.tutorialspoint.com/data_structures_algorithms/insertion_sort_algorithm.htm) (only for integer data types)
 
 ## ToDo Tests
  - [ ] [QHeap](https://www.hackerrank.com/challenges/qheap1/problem)
