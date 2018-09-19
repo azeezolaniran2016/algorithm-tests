@@ -9,6 +9,7 @@ It's time I sharpen up my algorithm skills by taking different tests. I'm docume
 ## Completed Tests
  - [x] [BinaryGap](https://app.codility.com/programmers/lessons/1-iterations/binary_gap/)
  - [x] [InsertionSort](https://www.tutorialspoint.com/data_structures_algorithms/insertion_sort_algorithm.htm) (only for integer data types)
+ - [x] [MergeSort](https://www.tutorialspoint.com/data_structures_algorithms/merge_sort_algorithm.htm) (only for integer data types)
 
 ## ToDo Tests
  - [ ] [QHeap](https://www.hackerrank.com/challenges/qheap1/problem)
