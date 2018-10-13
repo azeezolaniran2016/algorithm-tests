@@ -23,25 +23,22 @@ func MergeSortInt(list []int) []int {
 // mergeInt merges 2 sorted list into 1 sorted list
 func mergeInt(a []int, b []int) (c []int) {
 	c = make([]int, 0, len(a)+len(b))
-	for {
-		lenA := len(a)
-		lenB := len(b)
-		if lenA > 0 && lenB > 0 {
-			if a[0] < b[0] {
-				c = append(c, a[0])
-				a = popFirstElement(a)
-			} else if a[0] == b[0] {
-				c = append(c, a[0])
-				a = popFirstElement(a)
-				c = append(c, b[0])
-				b = popFirstElement(b)
-			} else {
-				c = append(c, b[0])
-				b = popFirstElement(b)
-			}
+	lenA := len(a)
+	lenB := len(b)
+	for lenA > 0 && lenB > 0 {
+		if a[0] < b[0] {
+			c = append(c, a[0])
+			a = popFirstElement(a)
+		} else if a[0] == b[0] {
+			c = append(c, a[0], b[0])
+			a = popFirstElement(a)
+			b = popFirstElement(b)
 		} else {
-			break
+			c = append(c, b[0])
+			b = popFirstElement(b)
 		}
+		lenA = len(a)
+		lenB = len(b)
 	}
 
 	if len(a) > 0 {
