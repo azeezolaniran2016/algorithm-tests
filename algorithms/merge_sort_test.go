@@ -6,8 +6,8 @@ import (
 	"github.com/stretchr/testify/assert"
 )
 
-func TestMergeSortInt(t *testing.T) {
-	table := []struct {
+var (
+	sortTestCases = []struct {
 		in       []int
 		expected []int
 	}{
@@ -32,8 +32,10 @@ func TestMergeSortInt(t *testing.T) {
 			expected: []int{-1000, -1, 0, 0, 10, 23, 34, 50, 78, 86, 100},
 		},
 	}
+)
 
-	for _, val := range table {
+func TestMergeSortInt(t *testing.T) {
+	for _, val := range sortTestCases {
 		assert.Equal(t, val.expected, MergeSortInt(val.in))
 	}
 }
