@@ -43,10 +43,10 @@ var (
 func TestBFS(t *testing.T) {
 	for _, tree := range trees {
 		l := len(tree.Nodes)
-		for x := l - 1; x > 0; x-- {
+		for x := l; x > 0; x-- {
 			result := BFS(x, &tree)
 			assert.Equal(t, len(tree.Nodes), len(result))
-			fmt.Printf("result: %+v\n", result) // ToDo: assert that the result shows that the Tree was traveresed in the right order. Right now I do this manually
+			fmt.Printf("start: %v, result: %+v\n", x, result) // ToDo: assert that the result shows that the Tree was traveresed in the right order. Right now I do this manually
 		}
 	}
 }
