@@ -10,6 +10,7 @@ It's time I sharpen up my algorithm skills by taking different tests. I'm docume
  - [x] [BinaryGap](https://github.com/azeezolaniran2016/algorithm-tests/blob/master/algorithms/binary_gap.go)
  - [x] [InsertionSort](https://github.com/azeezolaniran2016/algorithm-tests/blob/master/algorithms/insertion_sort.go) (Integer data types)
  - [x] [MergeSort](https://www.tutorialspoint.com/data_structures_algorithms/merge_sort_algorithm.htm) (Integer data types)
+ - [x] [HeapSort](https://github.com/azeezolaniran2016/algorithm-tests/blob/master/algorithms/heap_sort_int.go)
  - [x] [QuickSort](https://github.com/azeezolaniran2016/algorithm-tests/blob/master/algorithms/quick_sort_int.go) (Integer data types)
  - [x] [Depth First Search Traversal](https://github.com/azeezolaniran2016/algorithm-tests/blob/master/algorithms/dfs.go)
  - [x] [Breadth First Search Traversal](https://github.com/azeezolaniran2016/algorithm-tests/blob/master/algorithms/bfs.go)

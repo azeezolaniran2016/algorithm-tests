@@ -34,9 +34,9 @@ func HeapSortInt(list []int) (r []int) {
 	return r
 }
 
-// makeListHeap converts an int array in to a Min Heap array
+// makeMinHeap converts an int array in to a Min Heap array
 func makeMinHeap(list []int) []int {
-	for i := len(list) - 1; i >= 0; i-- {
+	for i := len(list) / 2; i >= 0; i-- {
 		list = heapifyMin(list, i)
 	}
 	return list
