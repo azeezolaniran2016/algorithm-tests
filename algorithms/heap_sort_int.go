@@ -22,46 +22,46 @@ package algorithms
 
 // HeapSortInt uses HeapSort Algorithm to sort a slice (list) of integers
 func HeapSortInt(list []int) (r []int) {
-	// heapify the list into a min binary heap
-	// after every heapify, the item at the root node (list[0]) == smallest item
-	// append that item to our result, and re-heapify the remaining items
-	r = make([]int, 0, len(list))
-	for len(list) > 0 {
-		list = makeMinHeap(list)
-		r = append(r, list[0])
-		list = list[1:]
-	}
-	return r
-}
 
-// makeMinHeap converts an int array in to a Min Heap array
-func makeMinHeap(list []int) []int {
-	for i := len(list) / 2; i >= 0; i-- {
-		list = heapifyMin(list, i)
+	// heapify the list into a max heap
+
+	// create a max heap from the input list
+	// we start from the right most and deepest node and move upwards to build the max heap
+	l := len(list)
+	for i := l / 2; i >= 0; i-- {
+		heapifyMax(list, i, l)
 	}
+
+	// start popping the max element, swapping it with the right most and deepest node and re-heapifying the resulting sub array
+	for i := l - 1; i > 0; i-- {
+		// pop and swap, but we still use same list :)
+		list[0], list[i] = list[i], list[0]
+
+		// heapify resulting sub-array
+		heapifyMax(list, 0, i)
+	}
+
 	return list
 }
 
-func heapifyMin(list []int, idx int) []int {
-	leftChild := getLeftChildNode(idx)
-	rightChild := getRightChildNode(idx)
+func heapifyMax(list []int, root, size int) {
+	largest := root
+	left := root*2 + 1
+	right := root*2 + 2
 
-	if rightChild < len(list) && list[idx] > list[rightChild] {
-		// swap position and heapify min downwards
-		list[idx], list[rightChild] = list[rightChild], list[idx]
-		list = heapifyMin(list, rightChild)
-	} else if leftChild < len(list) && list[idx] > list[leftChild] {
-		// swap positions and heapifyMin downards
-		list[idx], list[leftChild] = list[leftChild], list[idx]
-		list = heapifyMin(list, leftChild)
+	// compare left child to root node, and update our largest node
+	if left < size && list[left] > list[largest] {
+		largest = left
 	}
-	return list
-}
 
-func getLeftChildNode(idx int) int {
-	return idx*2 + 1
-}
+	// compare right child to root node, and update our largest node
+	if right < size && list[right] > list[largest] {
+		largest = right
+	}
 
-func getRightChildNode(idx int) int {
-	return idx*2 + 2
+	// if the root node isn't the largest node, swap root with larger child, and heapify the sub-tree downward
+	if largest != root {
+		list[root], list[largest] = list[largest], list[root]
+		heapifyMax(list, largest, size)
+	}
 }

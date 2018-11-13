@@ -22,3 +22,4 @@ It's time I sharpen up my algorithm skills by taking different tests. I'm docume
  - [ ] Add more test cases for BinaryGap and DecimalToBaseX functions
  - [ ] Add test to cover traverseNode function in DFS implementation
  - [ ] Add comments to explain logic. Right now I think if I come back to this, I would remember what I did, but don't we all always feel that way ¯\_(ツ)_/¯
+ - [ ] Add test for heapifyMax function in HeapSort
